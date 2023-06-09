@@ -1,0 +1,41 @@
+<header>
+    <img src="/assets/logo.png" height="100"><h1>Lassie Database</h1>
+    
+  </header>
+  <button routerLink="/listar-producto" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+  
+<h1>Consultas</h1>
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+          <div class="card">
+              <div class="card-body text-center">
+<form class="mt-3" >
+  <h2>Consulta 1: Promedio de precios por categoría</h2>
+  <button type="button" class="btn btn-success float-end" (click)="consultarPromedio()">CONSULTAR</button>
+
+  <h2>Consulta 2: Número de productos en una ubicación</h2>
+  <input type="text" [(ngModel)]="ubicacion" placeholder="Ubicación">
+  <button type="button" class="btn btn-success float-end" (click)="consultarNumero()">CONSULTAR</button>
+</form>
+
+<div *ngIf="promedioResultados">
+  <h3>Promedio de precios por categoría:</h3>
+  <ul>
+    <li *ngFor="let resultado of promedioResultados">{{ resultado._id }}: {{ resultado.precioPromedio }}</li>
+  </ul>
+</div>
+
+<div *ngIf="numeroResultados">
+  <h3>Número de productos en la ubicación "{{ ubicacion }}": {{ numeroResultados }}</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+
+  <footer>
+   
+  <p>&copy; 2023 ACR. Todos los derechos reservados.</p>
+</footer>

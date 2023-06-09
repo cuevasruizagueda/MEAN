@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Iniciar sesión</title>
+  
+</head>
+
+<body>
+  <header>
+    <img src="/assets/logo.png" height="100">
+    <h1>Lassie Database</h1>
+  </header>
+
+  <div class="container">  
+    <h1>Iniciar sesión</h1>
+
+    <form (ngSubmit)="login()" *ngIf="!loginSuccess">
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required><br>
+    
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required><br>
+    
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    
+    <p *ngIf="loginError" style="color: red;">Usuario o contraseña incorrectos</p>
+    
+    <p *ngIf="loginSuccess" style="color: green;">Inicio de sesión exitoso</p>
+    
+  </div>
+
+  <footer>
+    <p>&copy; 2023 ACR. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<!DOCTYPE html>
+<header>
+  <img src="/assets/logo.png" height="100"><h1> Database</h1>
+  
+</header>
+<html>
+
+
+<body>
+  <div class="container">
+    <form  (ngSubmit)="onSubmit()" class="animated-form">
+      <h2>Iniciar sesión</h2>
+      <div class="form-group">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" class="form-control" [(ngModel)]="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password" required>
+      </div>
+      <button type="submit" [routerLink]="['/listar-producto']" class="btn btn-primary">Iniciar sesión</button>
+    </form>
+  </div>
+</body>
+<footer>
+   
+  <p>&copy; 2023 ACR. Todos los derechos reservados.</p>
+</footer>
+</html>
+-->

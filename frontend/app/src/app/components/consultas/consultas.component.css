@@ -1,0 +1,27 @@
+
+@keyframes colorChange {
+    0% { background-color: #f2f2f2; }
+    50% { background-color: #007bff; }
+    100% { background-color: #f2f2f2; }
+  }
+  .fas {
+    cursor: pointer;
+    margin-left: 7px;
+}
+.container {
+    
+    height: 100vh;
+  }
+  header {
+    padding: 20px;
+    text-align: center;
+    animation: colorChange 3s ease-in-out infinite;
+  }
+  
+  footer {
+    padding: 20px;
+    text-align: center;
+    animation: colorChange 3s ease-in-out infinite;
+  }
+
+  
